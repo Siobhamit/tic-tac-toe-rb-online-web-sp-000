@@ -29,12 +29,9 @@ end
 
 def won?(board)
      WIN_COMBINATIONS.each do |combination|
-      a = combination[0]
-      b = combination[1]
-      c = combination[2]
-      d = board[a]
-      e = board[b]
-      f = board[c]
+      d = board[combination[0]]
+      e = board[combination[1]]
+      f = board[combination[2]]
       if d == e && e == f && d != " "
         return combination
       end
